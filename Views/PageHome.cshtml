@@ -1,0 +1,17 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PageHome>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_Layout.cshtml";
+	ViewData["Title"] = @Model.Value("pageTitle");
+}
+@await Html.PartialAsync("_Showcase")
+@await Html.PartialAsync("_Logotypes")
+@await Html.PartialAsync("_Features")
+@await Html.PartialAsync("_AboutCompany")
+@await Html.PartialAsync("_OurServices")
+@await Html.PartialAsync("_ChooseUs")
+@await Html.PartialAsync("_ProjectCase")
+@await Html.PartialAsync("_MeetTeam")
+@await Html.PartialAsync("_ArticleNews")
+@await Html.PartialAsync("_Signup")

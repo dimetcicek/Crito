@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+<section class="contactform">
+    <div class="container">
+        <div id="formContainer">
+            <h2>Leave us a message for any information.</h2>
+            <div id="contact-form" class="form">
+                <input id="contact-name" type="text" placeholder="Name*">
+                <input id="contact-email" type="text" placeholder="Email*">
+                <input id="contact-message" type="text" placeholder="Your Message*">
+                <button onclick="validateForm()" class="btn-yellow">Send Message<i class="fa-regular fa-arrow-up-right"></i></button>
+            </div>
+        </div>
+        <h2 id="thankYouMessage" hidden>Thank you for your message!</h2>
+    </div>
+</section>

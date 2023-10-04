@@ -1,0 +1,10 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PageContact>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_Layout.cshtml";
+}
+@await Html.PartialAsync("_ContactShowcase")
+@await Html.PartialAsync("_ContactInformation")
+@await Html.PartialAsync("_ContactForm")
+@await Html.PartialAsync("_GoogleMap")
