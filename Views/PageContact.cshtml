@@ -3,8 +3,26 @@
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "_Layout.cshtml";
+
+	var contactForm = new Crito.Models.ContactForm();
 }
 @await Html.PartialAsync("_ContactShowcase")
 @await Html.PartialAsync("_ContactInformation")
-@await Html.PartialAsync("_ContactForm")
+<section class="contactform">
+    <div class="container">
+        <div id="formContainer">
+            <h2>Leave us a message for any information.</h2>
+
+            @using (Html.BeginUmbracoForm("Index", "Contact", FormMethod.Post))
+            {
+                <div asp-validation-summary="All"></div>
+                <input asp-for="@contactForm.Name" id="contact-name" type="text" placeholder="Name*">
+                <input asp-for="@contactForm.Email" id="contact-email" type="text" placeholder="Email*">
+                <input asp-for="@contactForm.Message" id="contact-message" type="text" placeholder="Your Message*">
+                <button onclick="validateForm()" class="btn-yellow">Send Message<i class="fa-regular fa-arrow-up-right"></i></button>
+            }
+        </div>
+        <h2 id="thankYouMessage" hidden>Thank you for your message!</h2>
+    </div>
+</section>
 @await Html.PartialAsync("_GoogleMap")
