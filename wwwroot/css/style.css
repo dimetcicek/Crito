@@ -947,18 +947,18 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-.contactform .container h2 {
+.contactform .container #formContainer h2 {
   font-family: "DM Sans", sans-serif;
   font-size: 45px;
   font-weight: 700;
   width: 35%;
   margin-left: 35%;
 }
-.contactform .container .form {
+.contactform .container #formContainer {
   width: 100%;
   padding: 20px 100px;
 }
-.contactform .container .form input {
+.contactform .container #formContainer input {
   display: block;
   border-radius: 25px;
   padding: 0 20px;
@@ -969,10 +969,10 @@ html, body {
   margin: 15px 0;
   width: 100%;
 }
-.contactform .container .form button {
+.contactform .container #formContainer button {
   width: 100%;
 }
-.contactform .container .form .errorInput {
+.contactform .container #formContainer .errorInput {
   border: 3px solid red;
 }
 

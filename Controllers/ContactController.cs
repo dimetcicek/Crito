@@ -24,6 +24,11 @@ namespace Crito.Controllers
             if (!ModelState.IsValid)     
                 return CurrentUmbracoPage();
 
+            if (string.IsNullOrWhiteSpace(contactForm.Name) || string.IsNullOrWhiteSpace(contactForm.Email) || string.IsNullOrWhiteSpace(contactForm.Message))
+            {
+                return CurrentUmbracoPage();
+            }
+
             using var mail = new MailService("no-reply@crito.com", "smtp.crito.com", 587, "dimet.cicek96@hotmail.com", "ehELap!234");
             // to sender
             mail.SendAsync(contactForm.Email, "Your contact request was received.", "Hi your request was received and we will be in contact with you as soon as possible.").ConfigureAwait(false);
